@@ -1,9 +1,9 @@
 import './App.css';
 
-const Person = () => {
+const Person = (props) => {
   return (
     <>
-      <h1>Name: John</h1>
+      <h1>Name: {props.name}</h1>
       <h2>Last Name: Maybee</h2>
       <h2>Age: 30</h2>
     </>
@@ -14,6 +14,10 @@ const App = () => {
 
   return (
     <div className="App">
+      <Person name={'John'}/>
+      <Person />
+      <Person />
+      <Person />
       <Person />
     </div>
   );
