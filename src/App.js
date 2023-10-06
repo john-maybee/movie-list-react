@@ -1,8 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 const App = () => {
   const [count, setCount] = useState(0);
+
+  // Initial render of the count due to useEffect hook is 5 //
+  useEffect(() => {
+    setCount(5);
+  }, []);
 
   return (
     <div className="App">
