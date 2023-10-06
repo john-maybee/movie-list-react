@@ -4,8 +4,8 @@ const Person = (props) => {
   return (
     <>
       <h1>Name: {props.name}</h1>
-      <h2>Last Name: Maybee</h2>
-      <h2>Age: 30</h2>
+      <h2>Last Name: {props.lasName}</h2>
+      <h2>Age: {props.age}</h2>
     </>
   )
 }
@@ -14,11 +14,16 @@ const App = () => {
 
   return (
     <div className="App">
-      <Person name={'John'}/>
-      <Person />
-      <Person />
-      <Person />
-      <Person />
+      <Person 
+        name='John' 
+        lasName='Maybee' 
+        age={33} 
+      />
+      <Person 
+        name="Tess" 
+        lasName="Allen" 
+        age={28} 
+      />
     </div>
   );
 }
